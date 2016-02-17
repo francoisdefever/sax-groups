@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @groups = Group.all
   end
 
   # GET /users/1
@@ -20,6 +21,19 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
   end
+
+  def random
+      array_id = User.all.map { |x| x.id }
+      while array_id.size > 0
+      Group.all.each do |group|
+          a = array_id.sample
+          User.find(a).update_attributes(group_id: group.id) unless a.nil?
+          array_id.delete(a)
+      end
+    end
+    redirect_to :root , notice: "job done! bitch!!!"
+end
+
 
   # POST /users
   # POST /users.json
