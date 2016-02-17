@@ -31,5 +31,5 @@ list_person = ["julie",
              "alexis"]
 
 23.times do |i|
-    Person.create(name:"#{list_person[i]}",     email:"#{list_person[i]}"+"@email.gmail.com", tel:'0678965412')
+    User.create(name:"#{list_person[i]}",email:"#{list_person[i]}"+"@email.gmail.com", tel:'0678965412')
 end
