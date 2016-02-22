@@ -27,5 +27,5 @@ production:
     pool: 5
     timeout: 5000
     username: deploy
-    password: deploy
+    password: 6666NAna6666
     #host: vps233851.ovh.net
