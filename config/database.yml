@@ -29,4 +29,3 @@ production:
     username: deploy
     password: deploy
     host: vps233851.ovh.net
-
